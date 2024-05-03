@@ -61,9 +61,3 @@ try {
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-
-if (!empty($errorMessage)) {
-    echo $errorMessage;
-} else {
-    echo $successMessage;
-}
