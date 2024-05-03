@@ -21,7 +21,7 @@ $(document).ready(function () {
         $("#Membership-Type").val("");
         $("#Source-of-Lead").val("");
         $("#w-form-done").show();
-        // $("#alert").append(`<div class="alert">Application Submitted Successfully!</div>`);
+        $("#alert").append(`<div class="alert">Application Submitted Successfully!</div>`);
       },
       error: function(XMLHttpRequest, textStatus, errorThrown) {
         $("#w-form-done").hide();

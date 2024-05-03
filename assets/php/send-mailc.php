@@ -42,7 +42,7 @@ require 'phpmailer/autoload.php';
     try {
         $mail->SMTPDebug = 2;                   // Enable verbose debug output
         $mail->isSMTP();                        // Set mailer to use SMTP
-        $mail->Host       = 'aicraise.com';    // Specify main SMTP server
+        $mail->Host       = 'https://shanmithabalakrishnan.github.io/aicraise/';    // Specify main SMTP server
         $mail->SMTPAuth   = true;               // Enable SMTP authentication
         $mail->Username   = 'coworking@aicraise.com'; // SMTP username
         $mail->Password   = 'TVAZZHIM52SW';         // SMTP password

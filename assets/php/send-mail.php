@@ -41,14 +41,14 @@ require 'phpmailer/autoload.php';
     try {
         $mail->SMTPDebug = 2;                   // Enable verbose debug output
         $mail->isSMTP();                        // Set mailer to use SMTP
-        $mail->Host       = 'aicraise.com';    // Specify main SMTP server
+        $mail->Host       = 'https://shanmithabalakrishnan.github.io/aicraise/';    // Specify main SMTP server
         $mail->SMTPAuth   = true;               // Enable SMTP authentication
         $mail->Username   = 'coworking@aicraise.com'; // SMTP username
         $mail->Password   = 'QY3-3T2}Go!*';         // SMTP password
         $mail->SMTPSecure = 'ssl';              // Enable TLS encryption, 'ssl' also accepted
         $mail->Port       = 465;                // TCP port to connect to set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-        $mail->setFrom('_mainaccount@aicraise.com' , 'AICRAISE' );           // Set sender of the mail
+        $mail->setFrom('coworking@aicraise.com' , 'AICRAISE' );           // Set sender of the mail
         $mail->addAddress('Coworking@aicraise.com');           // Add a recipient
         //$mail->addCC('', '');
 
