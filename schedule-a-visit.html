@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-2F0G8B4P4Z"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-2F0G8B4P4Z'); </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Coworking Space in Coimbatore - AIC RAISE</title>
+
+    <!-- DATE PICKER STYLES -->
+    <link rel="stylesheet" type="text/css" href="../cdn.jsdelivr.net/npm/pikaday/css/pikaday.css" />
+
+    <link href="../uploads-ssl.webflow.com/coworking/css/webflow.min.css"
+        rel="stylesheet" type="text/css" />
+
+    <link href="post/photos/favicon.png" rel="shortcut icon" type="image/x-icon" />
+
+    <link href="https://fonts.googleapis.com/" rel="preconnect" />
+    <link
+      href="https://fonts.gstatic.com/"
+      rel="preconnect"
+      crossorigin="anonymous"
+    />
+    <script
+      src="../ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      type="text/javascript"
+    ></script>
+
+    <script type="text/javascript">
+        WebFont.load({
+            google: {
+                families: [
+                    "Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic",
+                    "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic",
+                    "Poppins:200,300,regular,500,600,700,800",
+                    "Inter:100,200,300,regular,500,600,700,800,900",
+                ],
+            },
+        });
+    </script>
+
+
+    <style>
+        :root {
+            /* Color Settings */
+            --accent-color: #7262e6;
+            /* Controls BG Color for Selected Date */
+            --secondary-accent-color: #9287e2;
+            /* Controls Text Color for Current Date */
+            --main-bg-color: #1f2023;
+            /* Controls BG Color of the Calendar */
+            --secondary-bg-color: #27292d;
+            /* Controls BG for Calendar Dates */
+            --heading-color: #ffffff;
+            /* Controls Main Heading Color */
+            --font-color: #c1c9d2;
+            /* Controls Main Font Color */
+            --accent-top-text-color: #ffffff;
+            /* Controls Font Color on top of Accent Color */
+            --disabled-font-color: #999999;
+            /* Controls Disabled Font Color */
+            --shadow-color: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+
+            /* Size & Spacing Settings */
+            --border-radius: 4px;
+            /* Controls Large Border Radius (Calendar Itself) */
+            --border-radius-sm: 2px;
+            /* Controls Small Border Radius (Calendar Dates) */
+            --font-size: 16px;
+            /* Controls Font Size */
+            --table-gap: 2px;
+            /* High number is not recommended */
+
+            /* Arrow Icons */
+            /* --left-arrow: url("https://assets-global.website-files.com/5ef7d336e1f9137fc9a09781/5ef7dd958382e006f4eb2033_chevron-left.svg");
+            --right-arrow: url("https://assets-global.website-files.com/5ef7d336e1f9137fc9a09781/5ef7dbca268421b03c01abf6_chevron-right.svg");
+            --arrow-bg-color: transparent; */
+        }
+
+        /* Picker Element Itself */
+        .pika-single {
+            color: var(--heading-color);
+            background: var(--main-bg-color);
+            border: none !important;
+            border-bottom-color: none !important;
+            border-radius: var(--border-radius);
+            font-family: inherit !important;
+        }
+
+        /* Datepicker Shadow */
+        .pika-single.is-bound {
+            box-shadow: var(--shadow-color) !important;
+        }
+
+        /* Month & Year Displayed in Middle */
+        .pika-label {
+            color: var(--heading-color);
+            background-color: transparent !important;
+        }
+
+        .pika-prev,
+        .is-rtl .pika-next {
+            background-image: var(--left-arrow);
+        }
+
+        .pika-next,
+        .is-rtl .pika-prev {
+            background-image: var(--right-arrow);
+        }
+
+        /* This is the table element which includes the days labels and the days in the month */
+        .pika-table {
+            border-spacing: var(--table-gap) !important;
+            border-collapse: separate;
+            font-size: var(--font-size) !important;
+        }
+
+        /* Days of the Week Labels */
+        .pika-table th {
+            color: var(--font-color);
+            text-align: center;
+        }
+
+        /* Days of the Week Underline - Example = underline dotted */
+        abbr[title] {
+            text-decoration: none !important;
+            cursor: default !important;
+        }
+
+        /* Month Days on Calendar - Default State */
+        .pika-button {
+            color: var(--font-color);
+            background: var(--secondary-bg-color);
+            border-radius: var(--border-radius-sm);
+            text-align: center;
+            font-size: 12px !important;
+        }
+
+        /* Week Label */
+        .pika-week {
+            color: var(--font-color);
+        }
+
+        /* Current Day Text/Number Color */
+        .is-today .pika-button {
+            color: var(--secondary-accent-color) !important;
+        }
+
+        /* The Selected Date/Day */
+        .is-selected .pika-button {
+            color: var(--accent-top-text-color) !important;
+            background: var(--accent-color);
+            box-shadow: none !important;
+        }
+
+        /* Styles for any Disabled Dates/Days  */
+        .is-disabled .pika-button {
+            color: var(--disabled-font-color);
+            opacity: 0.3;
+            background: transparent !important;
+        }
+
+        /* Styles for Date/Day Hover (can be same styles as "selected" styles) */
+        .pika-button:hover {
+            color: var(--accent-top-text-color) !important;
+            background: var(--accent-color) !important;
+            border-radius: var(--border-radius-sm) !important;
+        }
+
+        /* Next & Prev Arrow Buttons */
+        .pika-prev,
+        .pika-next {
+            display: block;
+            cursor: pointer;
+            position: relative;
+            outline: none;
+            border: 0;
+            padding: 0;
+            width: 20px;
+            height: 30px;
+            text-indent: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            background-color: var(--arrow-bg-color) !important;
+            opacity: 0.5;
+        }
+    </style>
+
+    <!-- DATE PICKER STYLES -->
+    <link rel="stylesheet" type="text/css" href="../cdn.jsdelivr.net/npm/pikaday/css/pikaday.css" />
+    
+    <meta name="google-site-verification" content="lx-fXUj4mk2rODonTcAbKm4X0eXZNZzjhjHTPzjvduQ" />
+
+</head>
+
+<body>
+    <div id="Schedulepop" class="schedulewrapper">
+        <div style="opacity: 1" class="close-bar">
+            <a href="index.html" class="w-inline-block">
+                <img src="post/Untitled design (2).png" alt="Logo" />
+            </a>
+            <a href="index.html" class="link-block-2 w-inline-block">
+                <img src="https://uploads-ssl.webflow.com/5d9f64ed50ffcbe80454e690/5ddd64fb5560952a9c538472_close.svg"
+                    width="12" alt="" />
+            </a>
+        </div>
+        <div class="columns-6 w-row">
+            <div class="column-9 vdf w-col w-col-6">
+                <img src="https://ik.imagekit.io/cbvocm5af/Coworking/photos/_DSC23881.jpg?updatedAt=1694063958744"
+                    alt="">
+            </div>
+            <div class="column-10 w-col w-col-6">
+                <div style="
+                opacity: 1;
+              " class="form-block gfds w-form">
+                    <img src="https://uploads-ssl.webflow.com/5d9f64ed50ffcbe80454e690/5dcecaff13d30e0d4d8f5d8b_overline.svg"
+                        width="60" alt="" />
+                    <h1 class="heading-32 heading-99">build your next dream with us</h1>
+                    <form id="wf-form-scheduleVisit" name="wf-form-scheduleVisit" data-name="scheduleVisit"
+                        class="schedulevisitform" method="POST">
+                        <div class="schedule-personalwrapper">
+                            <!-- Name -->
+                            <label for="enq-name" class="field-label-2">Name</label>
+                            <input 
+                                type="text" 
+                                name="name" 
+                                id="enq-name" 
+                                class="w-input" 
+                                autofocus="true"
+                                maxlength="256" 
+                                data-name="Name" 
+                                placeholder="John Doe" 
+                                required="" 
+                            />
+                            <!-- Email Address -->
+                            <label for="enq-email" class="field-label-2">Email Address</label>
+                            <input 
+                                type="email" class="w-input" autofocus="true" maxlength="256" name="email"
+                                data-name="Email" placeholder="john.d@gmail.com" id="enq-email" required="" />
+                            <!-- Phone Number -->
+                            <label for="enq-phone" class="field-label-3">Phone Number</label>
+                            <input type="tel" class="w-input" autofocus="true" maxlength="10" name="Phone-Number"
+                                data-name="Phone Number" placeholder="1234567890" id="enq-phone" required="" />
+                            <!-- Date of visit -->
+                            <label for="datepicker" class="field-label-4">Date of visit</label>
+                            <input type="text" class="w-node-e7800c50-c81f-8e1f-69b3-eb5d7821e1a0-b3bea2f2 w-input"
+                                maxlength="256" name="field" data-name="Field" placeholder="Choose a Date"
+                                id="datepicker" required="" />
+                            <!-- Center of choice -->
+                            <label for="locationInterest-2" class="field-label-5">Center of choice</label>
+                            <select id="locationInterest" name="locationInterest" data-name="Location Interest"
+                                required="" class="w-select">
+                                <option value="None">Select</option>
+                                <option value="HSR">Coworking 1</option>
+                                <option value="ORR">Coworking 2</option>
+                            </select>
+                            <!-- Membership Type -->
+                            <label for="Membership-Type" class="field-label-6">Preferred Membership Type</label>
+                            <select id="Membership-Type" name="Membership-Type" data-name="Membership Type" required=""
+                                class="w-select">
+                                <option value="None">Select</option>
+                                <option value="Hot Desk">Hot Desk</option>
+                                <option value="Dedicated Desk">Dedicated Desks</option>
+                                <option value="Private Office">Private Office</option>
+                                <option value="Day Pass">Day Pass</option>
+                                <option value="Managed Office">Managed Office</option>
+                                <option value="Meeting Room">Meeting Room</option>
+                            </select>
+                            <!-- Source of lead -->
+                            <label for="Source-of-Lead" class="field-label-6">Where did you hear about us?</label>
+                            <select id="Source-of-Lead" name="Source-of-Lead" data-name="Source of Lead" required=""
+                                class="w-select">
+                                <option value="None">Select</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Google Search">Google Search</option>
+                                <option value="Referral">Referral</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" id="submit-btn" name="enquiry" class="button schedule w-button">Submit</button>
+                        <!-- <button type="submit" id="submit-btn" class="button schedule w-button">Submit</button> -->
+                    </form>
+                    <div class="w-form-done">
+                        <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/php/submit-app.js"></script>
+
+    <script
+      src="../uploads-ssl.webflow.com/5d9f64ed50ffcbe80454e690/js/webflow.coworking.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- DATE PICKER JS -->
+    <script src="../cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <!-- FOR 'SINGLE' DATE PICKER ON ONE FORM/PAGE. REMOVE CODE BELOW IF NOT NEEDED! -->
+    <script>
+        var picker = new Pikaday({
+            field: document.getElementById("datepicker"),
+            disableWeekends: true, // Disables option to select weekend days
+            firstDay: 0, // First day of the week - 0 for Sunday & 1 for Monday
+            minDate: new Date(), // Disables option to select days prior to current day
+            //yearRange: [1968, new Date().getFullYear().toString()], //Here you can choose the earliest year option to the current date or change "new Date().getFullYear().toString()" to 2008 for example.
+        });
+
+        //Sets Default Date to Current Date
+        picker.gotoToday();
+    </script>
+</body>
+
+</html>
