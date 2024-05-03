@@ -8,7 +8,7 @@ $(document).ready(function () {
 
     $.ajax({
       url: "assets/php/send-mailc.php",
-      type: "post",
+      type: "GET",
       data: formData,
       processData: false,
       contentType: false,

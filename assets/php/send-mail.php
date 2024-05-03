@@ -19,13 +19,13 @@ require 'phpmailer/autoload.php';
     $mail = new PHPMailer(true);
 
 
-    $name   = $_POST['name'];
-    $emailFrom  = $_POST['email'];
-    $phone  = $_POST['Phone-Number'];
-    $DateVisit = $_POST['field'];
-    $CenterChoice = $_POST['locationInterest'];
-    $MembershipType = $_POST['Membership-Type'];
-    $SourceLead = $_POST['Source-of-lead'];
+    $name   = $GET['name'];
+    $emailFrom  = $GET['email'];
+    $phone  = $_GET['Phone-Number'];
+    $DateVisit = $_GET['field'];
+    $CenterChoice = $_GET['locationInterest'];
+    $MembershipType = $_GET['Membership-Type'];
+    $SourceLead = $_GET['Source-of-lead'];
 
     $subject = 'A New Schedule form received from ' .$name;
 
@@ -41,7 +41,7 @@ require 'phpmailer/autoload.php';
     try {
         $mail->SMTPDebug = 2;                   // Enable verbose debug output
         $mail->isSMTP();                        // Set mailer to use SMTP
-        $mail->Host       = 'https://shanmithabalakrishnan.github.io/aicraise/';    // Specify main SMTP server
+        $mail->Host       = 'aicraise.com';    // Specify main SMTP server
         $mail->SMTPAuth   = true;               // Enable SMTP authentication
         $mail->Username   = 'coworking@aicraise.com'; // SMTP username
         $mail->Password   = 'QY3-3T2}Go!*';         // SMTP password

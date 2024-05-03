@@ -18,13 +18,13 @@ require 'phpmailer/autoload.php';
     $mail = new PHPMailer(true);
 
 
-    $FullName   = $_POST['Full-Name'];
-    $CompanyName = $_POST['Company-Name'];
-    $Email  = $_POST['Email-3'];
-    $Phone  = $_POST['Phone-Number'];
-    $LookingFor =$_POST['Interested-Offering'];
-    $SourceLead =$_POST['Source-of-Lead'];
-    $CompanySize =$_POST['Company-Size'];
+    $FullName   = $_GET['Full-Name'];
+    $CompanyName = $_GET['Company-Name'];
+    $Email  = $_GET['Email-3'];
+    $Phone  = $_GET['Phone-Number'];
+    $LookingFor =$_GET['Interested-Offering'];
+    $SourceLead =$_GET['Source-of-Lead'];
+    $CompanySize =$_GET['Company-Size'];
 
     $subject = 'A New Enquiry form received from ' .$FullName;
 
@@ -42,7 +42,7 @@ require 'phpmailer/autoload.php';
     try {
         $mail->SMTPDebug = 2;                   // Enable verbose debug output
         $mail->isSMTP();                        // Set mailer to use SMTP
-        $mail->Host       = 'https://shanmithabalakrishnan.github.io/aicraise/';    // Specify main SMTP server
+        $mail->Host       = 'aicraise.com';    // Specify main SMTP server
         $mail->SMTPAuth   = true;               // Enable SMTP authentication
         $mail->Username   = 'coworking@aicraise.com'; // SMTP username
         $mail->Password   = 'TVAZZHIM52SW';         // SMTP password
