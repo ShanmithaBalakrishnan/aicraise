@@ -1,3 +1,4 @@
+/*
 $(document).ready(function () {
 
 
@@ -8,7 +9,7 @@ $(document).ready(function () {
 
     $.ajax({
       url: "assets/php/send-mailc.php",
-      type: "GET",
+      type: "post",
       data: formData,
       processData: false,
       contentType: false,
@@ -22,4 +23,26 @@ $(document).ready(function () {
       }
     });
   });
-});
+}); 
+*/
+
+document
+  .querySelector("#wf-form-ContactForm")
+  .addEventListener("submit", handleSubmit);
+
+const submitSuccess = document.querySelector('#success-text-1')
+const submitError = document.querySelector('#error-text-1')
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  let myForm = document.getElementById("#wf-form-ContactForm");
+  let formData = new FormData(this);
+  fetch("/", {
+    method: "GET",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    
+    .then(() => { submitSuccess.setAttribute('data-submit', success); })
+    .catch((error) => { submitError.setAttribute('data-submit', error) });
+};

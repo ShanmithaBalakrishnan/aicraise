@@ -6,6 +6,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+ob_end_flush();
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
 //Load Composer's autoloader
 require 'phpmailer/autoload.php';
 
@@ -49,16 +54,17 @@ try {
     $mail->SMTPSecure = 'ssl';              // Enable TLS encryption, 'ssl' also accepted
     $mail->Port       = 465;                // TCP port to connect to set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-    $mail->setFrom('coworking@aicraise.com', 'AICRAISE');           // Set sender of the mail
-    $mail->addAddress('Coworking@aicraise.com');           // Add a recipient
+    $mail->setFrom('', 'AICRAISE');           // Set sender of the mail
     //$mail->addCC('', '');
+    $userEmail = $_POST['user_email']; // Assuming you're getting the email from a form field named 'user_email'
+    $mail->addAddress($userEmail);
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
     $mail->Subject = $subject;
     $mail->Body = $htmlContent;
     $mail->send();
-    
+
     $successMessage = 'Application Submitted Successfully';
     $errorMessage = '';
 } catch (Exception $e) {
