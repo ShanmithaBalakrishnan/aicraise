@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
   $("#wf-form-scheduleVisit").on("submit", function (e) {
     e.preventDefault();
 
@@ -8,7 +6,7 @@ $(document).ready(function () {
 
     $.ajax({
       url: "assets/php/send-mail.php",
-      type: "GET",
+      type: "POST",
       data: formData,
       processData: false,
       contentType: false,
@@ -21,13 +19,15 @@ $(document).ready(function () {
         $("#Membership-Type").val("");
         $("#Source-of-Lead").val("");
         $("#w-form-done").show();
-        $("#alert").append(`<div class="alert">Application Submitted Successfully!</div>`);
+        $("#alert").append(
+          `<div class="alert">Application Submitted Successfully!</div>`
+        );
       },
-      error: function(XMLHttpRequest, textStatus, errorThrown) {
+      error: function (XMLHttpRequest, textStatus, errorThrown) {
         $("#w-form-done").hide();
         $("#w-form-fail").show();
         alert(errorThrown);
-      }
+      },
     });
   });
 });

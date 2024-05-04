@@ -23,13 +23,13 @@ require 'phpmailer/autoload.php';
 $mail = new PHPMailer(true);
 
 
-$FullName   = $_GET['Full-Name'];
-$CompanyName = $_GET['Company-Name'];
-$Email  = $_GET['Email-3'];
-$Phone  = $_GET['Phone-Number'];
-$LookingFor = $_GET['Interested-Offering'];
-$SourceLead = $_GET['Source-of-Lead'];
-$CompanySize = $_GET['Company-Size'];
+$FullName   = $_POST['Full-Name'];
+$CompanyName = $_POST['Company-Name'];
+$Email  = $_POST['Email-3'];
+$Phone  = $_POST['Phone-Number'];
+$LookingFor = $_POST['Interested-Offering'];
+$SourceLead = $_POST['Source-of-Lead'];
+$CompanySize = $_POST['Company-Size'];
 
 $subject = 'A New Enquiry form received from ' . $FullName;
 
@@ -54,7 +54,7 @@ try {
     $mail->SMTPSecure = 'ssl';              // Enable TLS encryption, 'ssl' also accepted
     $mail->Port       = 465;                // TCP port to connect to set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-    $mail->setFrom('', 'AICRAISE');           // Set sender of the mail
+    $mail->setFrom('coworking@aicraise.com', 'AICRAISE');           // Set sender of the mail
     //$mail->addCC('', '');
     $userEmail = $_POST['user_email']; // Assuming you're getting the email from a form field named 'user_email'
     $mail->addAddress($userEmail);

@@ -19,13 +19,13 @@ require 'phpmailer/autoload.php';
 $mail = new PHPMailer(true);
 
 
-$name   = $GET['name'];
-$emailFrom  = $GET['email'];
-$phone  = $_GET['Phone-Number'];
-$DateVisit = $_GET['field'];
-$CenterChoice = $_GET['locationInterest'];
-$MembershipType = $_GET['Membership-Type'];
-$SourceLead = $_GET['Source-of-lead'];
+$name   = $POST['name'];
+$emailFrom  = $POST['email'];
+$phone  = $_POST['Phone-Number'];
+$DateVisit = $_POST['field'];
+$CenterChoice = $_POST['locationInterest'];
+$MembershipType = $_POST['Membership-Type'];
+$SourceLead = $_POST['Source-of-lead'];
 
 $subject = 'A New Schedule form received from ' . $name;
 

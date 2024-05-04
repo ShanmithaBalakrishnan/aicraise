@@ -1,4 +1,3 @@
-/*
 $(document).ready(function () {
 
 
@@ -24,25 +23,37 @@ $(document).ready(function () {
     });
   });
 }); 
-*/
 
+
+/*
 document
   .querySelector("#wf-form-ContactForm")
   .addEventListener("submit", handleSubmit);
 
-const submitSuccess = document.querySelector('#success-text-1')
-const submitError = document.querySelector('#error-text-1')
+const submitSuccess = document.querySelector("#success-text-1");
+const submitError = document.querySelector("#error-text-1");
 
 const handleSubmit = (e) => {
   e.preventDefault();
   let myForm = document.getElementById("#wf-form-ContactForm");
   let formData = new FormData(this);
   fetch("/", {
-    method: "GET",
+    method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: new URLSearchParams(formData).toString(),
   })
-    
-    .then(() => { submitSuccess.setAttribute('data-submit', success); })
-    .catch((error) => { submitError.setAttribute('data-submit', error) });
+    .then(() => {
+      submitSuccess.setAttribute("data-submit", success);
+    })
+    .catch((error) => {
+      submitError.setAttribute("data-submit", error);
+    });
 };
+
+function alertSubmit() {
+  alert("Your details were successfully received.");
+}
+
+const form = document.querySelector("#wf-form-ContactForm");
+form.addEventListener("submit", alertSubmit);
+*/
